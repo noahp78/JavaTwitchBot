@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import noahp78.twitch.commands.CommandAbout;
 import noahp78.twitch.commands.CommandHelper;
+import noahp78.twitch.plugin.PluginSystem;
 import noahp78.twitch.util.Config;
 
 import org.jibble.pircbot.IrcException;
@@ -13,6 +14,15 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         CommandHelper.Register(new CommandAbout());
+        
+        //Give plugins time to start
+        System.out.println("Starting PluginSystem");
+        try {
+			PluginSystem.Init();
+		} catch (Exception e1) {
+			System.out.println("FAILED TO START PLUGINSYSTEM: ");// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
         
         bot = new TwitchBot();
 		// Enable debugging output.
