@@ -12,4 +12,10 @@ public class CommandAbout extends Command{
 		
 		
 	}
+	@Override
+	String description() {
+		// TODO Auto-generated method stub
+		return "Version info about the bot";
+	}
+	
 }

@@ -30,7 +30,7 @@ public class TwitchBot extends PircBot {
     			}
     		}
     	}
-    	    // do some work here on intValue
+    	    
     	sendMessage(channel, " Welcome to the party " + login + "!");
     }
 }

@@ -29,4 +29,8 @@ public class CommandHelper {
 		return null;
 		
 		}		
+	public static HashMap get(){
+		return (HashMap) commands.clone();
+		
 	}
+}
